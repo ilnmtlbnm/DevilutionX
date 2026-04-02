@@ -1304,8 +1304,9 @@ void DiabloSplash()
 	if (!gbShowIntro)
 		return;
 
-	if (*GetOptions().StartUp.splash == StartUpSplash::LogoAndTitleDialog)
-		play_movie("gendata\\logo.smk", true);
+	// Skip logo.smk (Smacker Video Technology copyright splash)
+	// if (*GetOptions().StartUp.splash == StartUpSplash::LogoAndTitleDialog)
+	//	play_movie("gendata\\logo.smk", true);
 
 	auto &intro = gbIsHellfire ? GetOptions().StartUp.hellfireIntro : GetOptions().StartUp.diabloIntro;
 
